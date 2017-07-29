@@ -48,7 +48,6 @@ public class PowerSupplyController : MonoBehaviour {
 
     public void spendPower(int amount)
     {
-        Debug.Log("spendPower called");
         changeReserves(-amount);
     }
 
@@ -61,6 +60,7 @@ public class PowerSupplyController : MonoBehaviour {
             powerSupplyReserveLevel = 0;
 
         updateSprites(powerSupplyReserveLevel);
+        EventManager.invokeSubscribersTo_PowerSupplyChanged();
     }
 
     private void updateSprites(int reserveLevel)

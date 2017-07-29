@@ -13,12 +13,13 @@ public class PickUpObject : MonoBehaviour {
         {
             magnetHolder.SetActive(true);
         }
-        else 
+        else
         {
-            if (magnetHolder.transform.childCount > 0)
+            if (magnetHolder.transform.childCount > 0) { 
                 magnetHolder.transform.GetChild(0).SetParent(null);
+                EventManager.invokeSubscribersTo_Drop();
+            }
             magnetHolder.SetActive(false);
-            EventManager.invokeSubscribersTo_Drop();
         }
 
     }

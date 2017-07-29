@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BatterySpawner : MonoBehaviour {
 
-	GameObject batteryType1;
-    GameObject batteryType2;
-    GameObject batteryType3;
+	public GameObject batteryType1;
+    public GameObject batteryType2;
+    public GameObject batteryType3;
     
 
     public void SpawnBattery() {

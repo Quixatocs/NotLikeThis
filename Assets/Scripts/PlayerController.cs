@@ -16,7 +16,8 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
         moveDirection = transform.TransformDirection(moveDirection);
         moveDirection *= speed;
         if (isJumping == false && Input.GetButtonDown("Jump"))
@@ -24,6 +25,15 @@ public class PlayerController : MonoBehaviour {
             isJumping = true;
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce);
             StartCoroutine(jumpTimer());
+        }
+
+        if (moveDirection.x > 0f)
+        {
+            transform.localScale = new Vector3(-0.5f, transform.localScale.y, 1f);
+        }
+        else if (moveDirection.x < 0f)
+        {
+            transform.localScale = new Vector3(0.5f, transform.localScale.y, 1f);
         }
 
         transform.position += moveDirection * Time.deltaTime;

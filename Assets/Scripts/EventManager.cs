@@ -37,20 +37,9 @@ public class EventManager : MonoBehaviour {
     public delegate void ScoreChanged(int value);
     public static event ScoreChanged scoreChanged;
 
+    public delegate void PublishFinalScore(int score);
+    public static event PublishFinalScore publishFinalScore;
 
-    void Awake()
-    {
-        singleton();
-    }
-
-    void singleton()
-    {
-        if (instance == null)
-            instance = this;
-        else if (instance != this)
-            Destroy(gameObject);
-        DontDestroyOnLoad(gameObject);
-    }
 
 
     public static void invokeSubscribersTo_Drop()
@@ -103,6 +92,11 @@ public class EventManager : MonoBehaviour {
     public static void invokeSubscribersTo_ScoreChanged(int value)
     {
         scoreChanged(value);
+    }
+
+    public static void invokeSubscribersTo_PublishFinalScore(int score)
+    {
+        publishFinalScore(score);
     }
 
 

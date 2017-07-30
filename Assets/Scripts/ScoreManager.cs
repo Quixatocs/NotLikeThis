@@ -15,11 +15,13 @@ public class ScoreManager : MonoBehaviour {
     void OnEnable()
     {
         EventManager.alienDeath += increaseScore;
+        EventManager.gameOver += publishFinalScore;
     }
 
     void OnDisable()
     {
         EventManager.alienDeath -= increaseScore;
+        EventManager.gameOver -= publishFinalScore;
     }
 
 
@@ -28,6 +30,10 @@ public class ScoreManager : MonoBehaviour {
         aliensZapped += 1;
 
         EventManager.invokeSubscribersTo_ScoreChanged(aliensZapped);
+    }
+
+    private void publishFinalScore() {
+        EventManager.invokeSubscribersTo_PublishFinalScore(aliensZapped);
     }
 
 }

@@ -32,14 +32,17 @@ public class PowerSupplyController : MonoBehaviour {
 
             case LOW_BAT_TAG:
                 Destroy(other.gameObject);
+                EventManager.invokeSubscribersTo_PlaySound_Deposit();
                 changeReserves(1);
                 break;
             case MED_BAT_TAG:
                 Destroy(other.gameObject);
+                EventManager.invokeSubscribersTo_PlaySound_Deposit();
                 changeReserves(2);
                 break;
             case HIGH_BAT_TAG:
                 Destroy(other.gameObject);
+                EventManager.invokeSubscribersTo_PlaySound_Deposit();
                 changeReserves(3);
                 break;
         }

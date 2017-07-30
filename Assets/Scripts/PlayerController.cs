@@ -11,9 +11,6 @@ public class PlayerController : MonoBehaviour {
     private WaitForSeconds jumpWait = new WaitForSeconds(0.75f);
 
 
-
-
-
     void Update()
     {
         
@@ -24,6 +21,7 @@ public class PlayerController : MonoBehaviour {
         {
             isJumping = true;
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce);
+            EventManager.invokeSubscribersTo_PlaySound_Jump();
             StartCoroutine(jumpTimer());
         }
 

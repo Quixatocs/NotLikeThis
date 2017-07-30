@@ -29,6 +29,7 @@ public class Pickup : MonoBehaviour {
                     transform.SetParent(other.transform);
                     transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
                     transform.GetComponent<Rigidbody2D>().simulated = false;
+                    EventManager.invokeSubscribersTo_PlaySound_PickUp();
                 }
                 break;
         }

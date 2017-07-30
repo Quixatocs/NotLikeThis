@@ -29,6 +29,7 @@ public class PowerSpendController : MonoBehaviour {
     {
         int RNGsus = Mathf.FloorToInt(Random.value * powerSupplies.Count);
         powerSupplies[RNGsus].GetComponent<PowerSupplyController>().spendPower(1);
+        EventManager.invokeSubscribersTo_PlaySound_PowerDownSound();
     }
 
     private void GetAndRecordTotalPowerReserves()
@@ -44,6 +45,9 @@ public class PowerSpendController : MonoBehaviour {
                 isAnySupplyEmpty = true;
             lastRecordedTotalPowerReserves += supplyLevel;
         }
+
+        if (isAnySupplyEmpty)
+            EventManager.invokeSubscribersTo_PlaySound_UnpoweredSound();
 
         EventManager.invokeSubscribersTo_TowerPowered(!isAnySupplyEmpty);
 

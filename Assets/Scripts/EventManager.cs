@@ -40,6 +40,32 @@ public class EventManager : MonoBehaviour {
     public delegate void PublishFinalScore(int score);
     public static event PublishFinalScore publishFinalScore;
 
+    public delegate void PlaySound_Jump();
+    public static event PlaySound_Jump playSound_Jump;
+
+    public delegate void PlaySound_PickUp();
+    public static event PlaySound_PickUp playSound_PickUp;
+
+    public delegate void PlaySound_Deposit();
+    public static event PlaySound_Deposit playSound_Deposit;
+
+    public delegate void PlaySound_TankerRoar();
+    public static event PlaySound_TankerRoar playSound_tankerRoar;
+
+    public delegate void PlaySound_GulperRoar();
+    public static event PlaySound_GulperRoar playSound_GulperRoar;
+
+    public delegate void PlaySound_StreakerRoar();
+    public static event PlaySound_StreakerRoar playSound_StreakerRoar;
+
+    public delegate void PlaySound_PowerDownSound();
+    public static event PlaySound_PowerDownSound playSound_PowerDownSound;
+
+    public delegate void PlaySound_UnpoweredSound();
+    public static event PlaySound_UnpoweredSound playSound_UnpoweredSound;
+
+
+
 
 
     public static void invokeSubscribersTo_Drop()
@@ -50,7 +76,6 @@ public class EventManager : MonoBehaviour {
 
     public static void invokeSubscribersTo_GameOver()
     {
-        Debug.Log("GameOver");
         gameOver();
     }
 
@@ -97,6 +122,47 @@ public class EventManager : MonoBehaviour {
     public static void invokeSubscribersTo_PublishFinalScore(int score)
     {
         publishFinalScore(score);
+    }
+
+
+    public static void invokeSubscribersTo_PlaySound_Jump()
+    {
+        playSound_Jump();
+    }
+
+    public static void invokeSubscribersTo_PlaySound_PickUp()
+    {
+        playSound_PickUp();
+    }
+
+    public static void invokeSubscribersTo_PlaySound_Deposit()
+    {
+        playSound_Deposit();
+    }
+
+    public static void invokeSubscribersTo_PlaySound_TankerRoar()
+    {
+        playSound_tankerRoar();
+    }
+
+    public static void invokeSubscribersTo_PlaySound_GulperRoar()
+    {
+        playSound_GulperRoar();
+    }
+
+    public static void invokeSubscribersTo_PlaySound_StreakerRoar()
+    {
+        playSound_StreakerRoar();
+    }
+
+    public static void invokeSubscribersTo_PlaySound_PowerDownSound()
+    {
+        playSound_PowerDownSound();
+    }
+
+    public static void invokeSubscribersTo_PlaySound_UnpoweredSound()
+    {
+        playSound_UnpoweredSound();
     }
 
 

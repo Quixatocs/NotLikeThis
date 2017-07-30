@@ -11,6 +11,21 @@ public class AlienSpawnController : MonoBehaviour {
     {
         int RNGsus = Mathf.FloorToInt(Random.value * aliens.Count);
         Instantiate(aliens[RNGsus], transform.position, Quaternion.identity);
+        switch (RNGsus)
+        {
+            case 0:
+                EventManager.invokeSubscribersTo_PlaySound_TankerRoar();
+                break;
+            case 1:
+                EventManager.invokeSubscribersTo_PlaySound_GulperRoar();
+                break;
+            case 2:
+                EventManager.invokeSubscribersTo_PlaySound_StreakerRoar();
+                break;
+            default:
+                Debug.Log("No case for value " + RNGsus);
+                break;
+        }
     }
 
 }

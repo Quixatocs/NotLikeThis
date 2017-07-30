@@ -16,6 +16,8 @@ public class ShootBolt : MonoBehaviour {
     private WaitForSeconds shootWait;
     private WaitForSeconds beamWait;
 
+    private bool isPowered = true;
+
     void Start() {
         lineRenderer = lineDrawer.GetComponent<LineRenderer>();
         shootWait = new WaitForSeconds(rechargeDelay);
@@ -25,19 +27,24 @@ public class ShootBolt : MonoBehaviour {
     void OnEnable()
     {
         EventManager.alienDetected += shootTarget;
+        EventManager.towerPowered += powerState;
     }
 
     void OnDisable()
     {
         EventManager.alienDetected -= shootTarget;
+        EventManager.towerPowered -= powerState;
     }
 
 
+    private void powerState(bool state) {
+        isPowered = state; 
+    }
 
 
     private void shootTarget(Transform target)
     {
-        if (!isShooting)
+        if (!isShooting && isPowered)
             StartCoroutine(shooting(target));
 
     }

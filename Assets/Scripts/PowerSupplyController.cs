@@ -9,6 +9,7 @@ public class PowerSupplyController : MonoBehaviour {
     private const string HIGH_BAT_TAG = "HighBat";
 
     public GameObject supplyVisuals;
+    public GameObject cordVisuals;
 
     // 3 = full
     // 2 = mid
@@ -20,6 +21,9 @@ public class PowerSupplyController : MonoBehaviour {
     public Sprite midSprite;
     public Sprite lowSprite;
     public Sprite emptySprite;
+
+    public Sprite onCord;
+    public Sprite offCord;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -70,15 +74,19 @@ public class PowerSupplyController : MonoBehaviour {
 
             case 0:
                 supplyVisuals.GetComponent<SpriteRenderer>().sprite = emptySprite;
+                cordVisuals.GetComponent<SpriteRenderer>().sprite = offCord;
                 break;
             case 1:
                 supplyVisuals.GetComponent<SpriteRenderer>().sprite = lowSprite;
+                cordVisuals.GetComponent<SpriteRenderer>().sprite = onCord;
                 break;
             case 2:
                 supplyVisuals.GetComponent<SpriteRenderer>().sprite = midSprite;
+                cordVisuals.GetComponent<SpriteRenderer>().sprite = onCord;
                 break;
             case 3:
                 supplyVisuals.GetComponent<SpriteRenderer>().sprite = fullSprite;
+                cordVisuals.GetComponent<SpriteRenderer>().sprite = onCord;
                 break;
             default:
                 Debug.Log("no case for reserve level " + reserveLevel);

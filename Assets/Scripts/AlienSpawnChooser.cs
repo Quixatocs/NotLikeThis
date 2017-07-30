@@ -25,7 +25,6 @@ public class AlienSpawnChooser : MonoBehaviour {
             timeWhenRateIncreased = Time.timeSinceLevelLoad;
             timeDifficultyMultiplier *= 0.8f;
         }
-        Debug.Log(timeDifficultyMultiplier);
         int RNGsus = Mathf.FloorToInt(Random.value * alienSpawners.Count);
         alienSpawners[RNGsus].GetComponent<AlienSpawnController>().SpawnAlien();
         float randoTime = Random.Range(spawnIntervalMinRange * timeDifficultyMultiplier, spawnIntervalMaxRange * timeDifficultyMultiplier);

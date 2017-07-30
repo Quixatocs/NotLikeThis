@@ -35,13 +35,18 @@ public class PowerSpendController : MonoBehaviour {
     {
         //Clean for new record
         lastRecordedTotalPowerReserves = 0;
+        bool isAnySupplyEmpty = false;
 
         foreach (GameObject obj in powerSupplies)
         {
-            lastRecordedTotalPowerReserves += obj.GetComponent<PowerSupplyController>().getPowerSupplyReserveLevel();
+            int supplyLevel = obj.GetComponent<PowerSupplyController>().getPowerSupplyReserveLevel();
+            if (supplyLevel == 0)
+                isAnySupplyEmpty = true;
+            lastRecordedTotalPowerReserves += supplyLevel;
         }
 
-        Debug.Log(lastRecordedTotalPowerReserves);
+        EventManager.invokeSubscribersTo_TowerPowered(!isAnySupplyEmpty);
+
         EventManager.invokeSubscribersTo_TotalPowerSupplyChangedTo(lastRecordedTotalPowerReserves);
     } 
 

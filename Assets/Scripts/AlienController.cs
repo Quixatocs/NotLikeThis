@@ -26,7 +26,7 @@ public class AlienController : MonoBehaviour {
         
         moveDirection = target.transform.position - transform.position;
         moveDirection = transform.TransformDirection(moveDirection);
-        moveDirection *= speed;
+        //moveDirection *= speed;
 
         if (moveDirection.x > 0f)
         {
@@ -37,7 +37,7 @@ public class AlienController : MonoBehaviour {
             transform.localScale = new Vector3(1f, transform.localScale.y, 1f);
         }
 
-        transform.position += moveDirection * Time.deltaTime;
+        transform.position += moveDirection.normalized * speed * Time.deltaTime;
 
     }
 

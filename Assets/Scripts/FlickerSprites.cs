@@ -12,6 +12,17 @@ public class FlickerSprites : MonoBehaviour {
         StartCoroutine(flickerE2());
     }
 
+    void OnEnable() {
+        StartCoroutine(flickerE1());
+        StartCoroutine(flickerE2());
+    }
+
+    void OnDisable()
+    {
+        StopCoroutine(flickerE1());
+        StopCoroutine(flickerE2());
+    }
+
     private IEnumerator flickerE1()
     {
         float randomWait1 = Random.Range(0.01f, 0.2f);

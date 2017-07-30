@@ -31,6 +31,12 @@ public class EventManager : MonoBehaviour {
     public delegate void ShotAbated();
     public static event ShotAbated shotAbated;
 
+    public delegate void TowerPowered(bool state);
+    public static event TowerPowered towerPowered;
+
+    public delegate void ScoreChanged(int value);
+    public static event ScoreChanged scoreChanged;
+
 
     void Awake()
     {
@@ -87,6 +93,16 @@ public class EventManager : MonoBehaviour {
     public static void invokeSubscribersTo_ShotAbated()
     {
         shotAbated();
+    }
+
+    public static void invokeSubscribersTo_TowerPowered(bool state)
+    {
+        towerPowered(state);
+    }
+
+    public static void invokeSubscribersTo_ScoreChanged(int value)
+    {
+        scoreChanged(value);
     }
 
 

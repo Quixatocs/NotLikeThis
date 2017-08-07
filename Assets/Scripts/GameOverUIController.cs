@@ -19,7 +19,7 @@ public class GameOverUIController : MonoBehaviour {
 
     private void activateUI() {
         gameOverUI.SetActive(true);
-
+        //EventManager.invokeSubscribersTo_PushFinalScore();
     }
 
 }

@@ -40,6 +40,9 @@ public class EventManager : MonoBehaviour {
     public delegate void PublishFinalScore(int score);
     public static event PublishFinalScore publishFinalScore;
 
+    public delegate void PushFinalScore();
+    public static event PushFinalScore pushFinalScore;
+
     public delegate void PlaySound_Jump();
     public static event PlaySound_Jump playSound_Jump;
 
@@ -122,6 +125,11 @@ public class EventManager : MonoBehaviour {
     public static void invokeSubscribersTo_PublishFinalScore(int score)
     {
         publishFinalScore(score);
+    }
+
+    public static void invokeSubscribersTo_PushFinalScore()
+    {
+        pushFinalScore();
     }
 
 

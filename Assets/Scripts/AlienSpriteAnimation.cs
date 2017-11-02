@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to flicker between movement animation sprite 1 and 2 for a two-stage 
+/// animated sprite
+/// </summary>
 public class AlienSpriteAnimation : MonoBehaviour {
 
     public Sprite movement1;

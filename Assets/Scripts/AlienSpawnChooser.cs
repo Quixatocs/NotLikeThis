@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class that chooses which spawn gameobject to spawn alien at. The spawners will be provided
+/// in a list. Also controls a difficulty multiplier for increasing the amount of spawning as 
+/// the game progresses.
+/// </summary>
 public class AlienSpawnChooser : MonoBehaviour {
 
     public List<GameObject> alienSpawners;
@@ -17,6 +22,7 @@ public class AlienSpawnChooser : MonoBehaviour {
         timeWhenRateIncreased = Time.timeSinceLevelLoad;
         Invoke("ChooseSpawnerAndSpawnAlien", initialSpawnDelay);
     }
+
 
 
     private void ChooseSpawnerAndSpawnAlien()

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to control the size of the detector collider based on the total power level
+/// </summary>
 public class DetectorSizeController : MonoBehaviour {
 
 	public float detectorMinSize = 2.0f;

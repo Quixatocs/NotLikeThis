@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to control alien movement and effects upon certain triggers
+/// </summary>
 public class AlienController : MonoBehaviour {
 
     private const string LASER_SHOT_TAG = "LaserShot";

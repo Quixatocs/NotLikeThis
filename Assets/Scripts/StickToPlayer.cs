@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to manage the connecting of another game object to the plater object
+/// </summary>
 public class StickToPlayer : MonoBehaviour {
 
     public GameObject target;

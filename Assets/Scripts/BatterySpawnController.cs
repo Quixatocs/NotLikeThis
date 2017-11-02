@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to choose which battery spawner to spawn a battery at.
+/// Also decides on the time interval between each spawning.
+/// </summary>
 public class BatterySpawnController : MonoBehaviour {
 
     public List<GameObject> dispensers;

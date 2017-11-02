@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to manage game states including time
+/// </summary>
 public class GameManager : MonoBehaviour {
 
     void Start()

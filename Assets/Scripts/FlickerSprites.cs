@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to manage the frame state of handpainted tower UI elements
+/// </summary>
 public class FlickerSprites : MonoBehaviour {
 
     public GameObject electricFlow1;

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to controll the colour of the conduit sprites in the UI.
+/// </summary>
 public class ConduitSpriteController : MonoBehaviour {
 
     public Color onColor; // = new Color(27, 134, 255);

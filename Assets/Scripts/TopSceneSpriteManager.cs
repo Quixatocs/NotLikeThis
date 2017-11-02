@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to manage visual/story aspects of the top screen
+/// </summary>
 public class TopSceneSpriteManager : MonoBehaviour {
 
     public GameObject blueChargeSpriteObject;

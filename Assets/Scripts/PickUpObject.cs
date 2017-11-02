@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to control the pickup of an item
+/// </summary>
 public class PickUpObject : MonoBehaviour {
 
     public GameObject magnetHolder;

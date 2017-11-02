@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to manage all sound effects and music
+/// </summary>
 public class SoundManager : MonoBehaviour {
 
     public AudioSource sfxSource;

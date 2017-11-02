@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to manage declaration and broadcast of all interclass events
+/// </summary>
 public class EventManager : MonoBehaviour {
 
 

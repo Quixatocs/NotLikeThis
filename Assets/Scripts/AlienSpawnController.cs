@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to randomly choose between which aliens are to be spawned
+/// </summary>
 public class AlienSpawnController : MonoBehaviour {
 
     public List<GameObject> aliens;

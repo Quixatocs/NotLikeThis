@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Class that updates the score UI upon receiving the score broadcast event
+/// </summary>
 public class ScoreDisplay : MonoBehaviour {
 
     void OnEnable()

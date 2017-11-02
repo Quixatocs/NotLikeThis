@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Class to cycle through the story text set in the unity editor
+/// </summary>
 public class StoryTextController : MonoBehaviour {
 
     public float timeBetweenText = 5f;

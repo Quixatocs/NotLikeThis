@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to manage the spawning of particle effects 
+/// </summary>
 public class FXManager : MonoBehaviour {
 
     public GameObject alienDeathFX;

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to control the horizontal and vertical movement of the player character based on keyboard input
+/// </summary>
 public class PlayerController : MonoBehaviour {
 
     public float speed = 6.0F;

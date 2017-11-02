@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Class that controls the restarting of the game
+/// </summary>
 public class RestartControl : MonoBehaviour {
 	
 

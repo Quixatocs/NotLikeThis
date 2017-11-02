@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class that draws a bolt of electricity from the tower to the alien
+/// </summary>
 public class ShootBolt : MonoBehaviour {
 
     public GameObject lineDrawer;

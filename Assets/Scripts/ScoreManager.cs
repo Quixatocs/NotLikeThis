@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to manage the score UI and it's publication to the game over UI
+/// </summary>
 public class ScoreManager : MonoBehaviour {
 
     int aliensZapped = 0;

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to control the state of and UI visuals when changing the power state of a power bank.
+/// Also supplies the power reserve leve to other classes.
+/// </summary>
 public class PowerSupplyController : MonoBehaviour {
 
     private const string LOW_BAT_TAG = "LowBat";

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Class to present Game Over data text in the UI
+/// </summary>
 public class GameOverKillsTextPopulator : MonoBehaviour {
 
 

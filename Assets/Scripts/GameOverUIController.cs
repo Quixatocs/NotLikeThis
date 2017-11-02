@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to activate the Game Over UI upon the broadcast of the gameover event
+/// </summary>
 public class GameOverUIController : MonoBehaviour {
 
     public GameObject gameOverUI;

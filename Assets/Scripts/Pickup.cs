@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to control the items state as it is picked up or dropped by the player
+/// </summary>
 public class Pickup : MonoBehaviour {
 
     private const string MAGNET_TAG = "Magnet";

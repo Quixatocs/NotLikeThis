@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class to control the random spending of power from a bank when the Tower loses power.
+/// </summary>
 public class PowerSpendController : MonoBehaviour {
 
     public List<GameObject> powerSupplies;

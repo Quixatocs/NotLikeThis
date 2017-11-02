@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class that attaches to the tower hitbox and checks for aliens. If it finds aliens it shoots
+/// </summary>
 public class ShootTrigger : MonoBehaviour {
 
     private const string ALIEN_TAG = "Alien";
